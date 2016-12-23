@@ -1,4 +1,4 @@
 ---
-- name: restart tomcat6
-  service: name=tomcat6 state=restarted
+- name: restart tomcat7
+  service: name=tomcat7 state=restarted
   become: true
