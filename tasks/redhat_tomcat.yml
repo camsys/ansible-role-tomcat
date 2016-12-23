@@ -8,6 +8,8 @@
    - tomcat-webapps
    # todo this should be configurable
    #- tomcat-admin-webapps
+   # todo this should be only if selinxu is enabled
+   - libselinux-python
 
 - name: change port of tomcat server
   copy: src=server.xml dest=/etc/tomcat/server.xml
