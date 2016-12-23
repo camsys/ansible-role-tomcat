@@ -4,8 +4,8 @@
   become: true
   with_items:
    - icedtea-web
-   - tomcat7
-   - tomcat7-webapps
+   - tomcat
+   - tomcat-webapps
    # todo this should be configurable
    #- tomcat7-admin-webapps
 
