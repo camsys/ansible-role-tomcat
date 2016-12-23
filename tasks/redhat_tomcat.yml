@@ -43,9 +43,11 @@
   command: /sbin/iptables -I INPUT 1 -p tcp --dport 8081 -j ACCEPT -m comment --comment "tomcat"
   become: true
   when: iptablesrules.stdout.find("tomcat") == -1
-  notify:
-   - save iptables
+ # TODO: this handler seems to be missing
+ # notify:
+ #  - save iptables
 
+# TODO: these aren't required anymore?
 #- name: download apache commons logging
 #  command: wget http://mirrors.ukfast.co.uk/sites/ftp.apache.org/commons/logging/binaries/commons-logging-1.2-bin.tar.gz chdir=/home/{{ user }} creates=/home/{{ user }}/commons-logging-1.2-bin.tar.gz
 
